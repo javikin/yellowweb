@@ -4679,8 +4679,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #FFFC27;
-  border-color: #FFFC27;
+  background-color: #B6DAED;
+  border-color: #B6DAED;
 }
 
 .navbar-default .navbar-brand {
@@ -4698,7 +4698,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #7fbbda;
+  color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -6633,6 +6633,7 @@ button.close {
 
 .affix {
   position: fixed;
+  z-index: 1;
 }
 
 @-ms-viewport {
