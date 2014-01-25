@@ -157,7 +157,7 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../img/callout.jpg) no-repeat center center fixed; 
+  background: url(../img/download.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -257,7 +257,7 @@ i.scroll:hover {
 
 #big{
   font-size: 20px;
-  color: #FFEE00;
+  color: #7fbbda;
 }
 .url{
   padding-top: 40px;  
