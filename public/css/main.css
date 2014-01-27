@@ -248,11 +248,11 @@ i.scroll:hover {
     }
     .dp:hover
     {
-        border:2px solid #eee;
+        /*border:2px solid #eee;
         transform:rotate(360deg);
         -ms-transform:rotate(360deg);  
         -webkit-transform:rotate(360deg);  
-        /*-webkit-font-smoothing:antialiased;*/
+        -webkit-font-smoothing:antialiased;*/
     }
 
 #big{
