@@ -29,7 +29,7 @@ body {
   position: fixed;
   height: 100%;
   overflow-y: auto;
-  z-index: 1000;
+  
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
@@ -87,7 +87,7 @@ body {
   top: 0;
   right: 0;
   position: fixed;
-  z-index: 1;
+  
 }
 
 #sidebar-wrapper.active {
@@ -116,8 +116,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  z-index: 2;
+  background-size: cover;  
 }
 
 /* Intro */
@@ -200,7 +199,7 @@ i.service-icon {
 /* Footer */
 
 footer {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .top-scroll {
@@ -286,6 +285,10 @@ i.scroll:hover {
   color: #007bb6;
 }
 
-.android{
+.media .android{
   color: #aad450  ;
+}
+
+.ahover{
+  cursor: default;
 }

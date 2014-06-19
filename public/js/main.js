@@ -1,54 +1,65 @@
-
-ANUBIS.portfolio = function (){
-	if($('#portfolio-projects').length > 0){		
-		var $container = $('#portfolio-projects');
+/*----------------------/
+	/* MAIN NAVIGATION
+	/*---------------------*/
 		
-		$container.imagesLoaded(function() {
-			$container.isotope({
-			  // options
-			  animationEngine: 'best-available',
-			  itemSelector : '.item-project',
-			  layoutMode : 'fitRows'
-			});
-		});
-	
-		
-		// filter items when filter link is clicked
-		var $optionSets = $('#portfolio-filter .option-set'),
-			$optionLinks = $optionSets.find('a');
-	
-		  $optionLinks.click(function(){
-			var $this = $(this);
-			// don't proceed if already selected
-			if ( $this.hasClass('selected') ) {
-			  return false;
+	$(window).on('scroll', function(){
+		if( $(window).width() > 1024 ) {
+			if( $(document).scrollTop() > 150 ) {
+				setNavbarLight();
+			}else {
+				setNavbarTransparent();
 			}
-			var $optionSet = $this.parents('.option-set');
-			$optionSet.find('.selected').removeClass('selected');
-			$this.addClass('selected');
-	  
-			// make option object dynamically, i.e. { filter: '.my-filter-class' }
-			var options = {},
-				key = $optionSet.attr('data-option-key'),
-				value = $this.attr('data-option-value');
-			// parse 'false' as false boolean
-			value = value === 'false' ? false : value;
-			options[ key ] = value;
-			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-			  // changes in layout modes need extra logic
-			  changeLayoutMode( $this, options )
-			} else {
-			  // otherwise, apply new options
-			  $container.isotope( options );
-			}
-			
-			return false;
-		});
+		}
+	});	
+	
+	function toggleNavbar() {
+		if( ($(window).width() > 1024) && ($(document).scrollTop() <= 150) ) {
+			setNavbarTransparent();
+		} else {
+			setNavbarLight();
+		}
 	}
-}
+
+	toggleNavbar();
+
+	$(window).resize( function() {
+		toggleNavbar();	
+	});
+
+	/* navbar setting functions */
+	function setNavbarLight() {		
+		$('.navbar').addClass('navbar-invert');		
+		$('.navbar-brand img').show();
+		
+	}
+
+	function setNavbarTransparent() {
+		$('.navbar').removeClass('navbar-invert');
+		$('.navbar-brand img').hide();		
+	}
+
+	$("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+	
 
 
 
-$(document).ready(function(){	
-	ANUBIS.portfolio();
-});
+/* Scroll slow en links */
+	$(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });

@@ -4539,7 +4539,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-nav > li > a {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
   line-height: 20px;
 }
 
@@ -4576,7 +4577,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li > a {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
   }
 }
 
@@ -4679,6 +4680,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
+  
+}
+
+.navbar-invert {
   background-color: #B6DAED;
   border-color: #B6DAED;
 }
@@ -4703,15 +4708,18 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  
   background-color: transparent;
+  border-color: #111;
+  border-bottom:1px solid;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #e7e7e7;
+  
+  border-color: #111;
+  border-bottom:1px solid;
 }
 
 .navbar-default .navbar-nav > .disabled > a,
