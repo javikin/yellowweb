@@ -7,7 +7,6 @@ require 'pony'
 
 enable :sessions
 
-
 helpers do
   def title
     if @title
